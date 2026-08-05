@@ -14,16 +14,46 @@ or
 False
 Constraints:
 • 1 <= len(s) <= 10^5
-'''
+# '''
+
+
+# Example 1 
+# Input 
+# madam 
+# Output 
+# True 
+ 
+# Example 2 
+# Input 
+# python 
+# Output 
+# False 
+ 
+# Example 3 
+# Input 
+# racecar 
+# Output 
+# True 
+ 
+# Follow-up 
+# Can you solve it using: 
+# • Two pointers?  
+# • Without reversing the string? 
 #Indexing:
-s= input()
-rev = ""
-for i in range(len(s)-1,-1,-1):      #range(start,stop,step) so start = len(s)-1
-    rev = rev + s[i]
 
-if s == rev:
-    print(True)
 
-else:
-    print(False)    
+s = input("Enter a string: ")
 
+left = 0
+right = len(s)-1
+
+is_palimdrome = True
+
+while left < right:
+  if s[left] != s[right]:
+    is_palimdrome = False
+    break
+  left += 1
+  right -=1
+
+print(is_palimdrome)
