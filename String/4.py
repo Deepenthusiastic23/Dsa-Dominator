@@ -20,14 +20,19 @@ Constraints
 using in operator and by checking every character and using sets
 '''
 
-s = input()
-vowel=0
-consonant=0
-for ch in s:
-    if ch == "a" or ch == "e" or ch == "i" or ch == "o" or ch == "u":   #also use in operator
-        vowel=vowel+1
-    else:
-        consonant=consonant+1
+s = input("Enter  a stirng :")
 
-print("Vowels=",vowel)
-print("Consonants=",consonant)
+vowel = 0
+consonant= 0
+
+for ch in s:
+  ch = ch.lower()
+
+  if ch in "aeiouAEIOU":
+    vowel +=1
+  else:
+    consonant +=1
+
+print("vowels =", vowel)
+print("consonants =", consonant)
+
